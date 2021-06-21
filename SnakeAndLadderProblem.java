@@ -18,7 +18,12 @@ public class SnakeAndLadderProblem {
 				break;
 			case ladder:
 				initial_position += roll_die;
-				System.out.println(initial_position);
+				if (initial_position > 100) {
+					initial_position -= roll_die;
+					System.out.println(initial_position);
+				} else {
+					System.out.println(initial_position);
+				}
 				break;
 			case snake:
 				initial_position -= roll_die;
