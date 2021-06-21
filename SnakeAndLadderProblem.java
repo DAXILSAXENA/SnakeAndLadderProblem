@@ -7,6 +7,7 @@ public class SnakeAndLadderProblem {
 	// User check for a option
 	public static void checkOption() {
 
+		int count = 0;
 		int initial_position = 0;
 		while (initial_position < win) {
 			int roll_die = (int) ((Math.floor(Math.random() * 10)) % 6) + 1;
@@ -35,8 +36,10 @@ public class SnakeAndLadderProblem {
 				}
 				break;
 			}
-
+			count++;
 		}
+
+		System.out.println("Number of times dice was played to win the game is " + count);
 	}
 
 	public static void main(String[] args) {
